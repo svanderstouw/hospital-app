@@ -10,9 +10,6 @@ public class Surgeon extends Doctor {
 	
 	public Surgeon(String empNumber, String empName, String specialty, Boolean isOperating) {
 		super(empNumber, empName, specialty);
-		this.empNumber = empNumber;
-		this.empName = empName;
-		this.specialty = specialty;
 		this.isOperating = isOperating;
 	}
 	
@@ -23,7 +20,7 @@ public class Surgeon extends Doctor {
 	
 	@Override
 	public String toString() {
-		return empName + " " + empNumber + " " + specialty + " " + isOperating;
+		return getEmpName() + " " + getEmpNumber() + " " + getSpecialty() + " " + isOperating;
 	}
 	
 }

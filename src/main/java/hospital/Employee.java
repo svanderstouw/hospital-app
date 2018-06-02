@@ -2,8 +2,8 @@ package hospital;
 
 public abstract class Employee implements Comparable<Employee> {
 
-	protected String empNumber;
-	protected String empName;
+	private String empNumber;
+	private String empName;
 
 	public String getEmpNumber() {
 		return empNumber;
@@ -11,6 +11,11 @@ public abstract class Employee implements Comparable<Employee> {
 
 	public String getEmpName() {
 		return empName;
+	}
+	
+	public Employee(String empNumber, String empName) {
+		this.empNumber = empNumber;
+		this.empName = empName;
 	}
 
 	public abstract String calculatePay();

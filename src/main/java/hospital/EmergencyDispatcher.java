@@ -14,18 +14,13 @@ public class EmergencyDispatcher extends Receptionist implements MedicalDuties{
 	}
 
 	@Override
-	public void drawBlood(Patient patient) {
-		patient.removeBlood(5);	
-	}
-
-	@Override
 	public void administerCare(Patient patient) {
 		patient.receiveHealth(5);	
 	}
 	
 	@Override
 	public String toString() {
-		return empName + " " + empNumber + " " + isOnPhone + " " + isOnEmergencyCall;
+		return getEmpName() + " " + getEmpNumber() + " " + isOnPhone + " " + isOnEmergencyCall;
 	}
 
 }

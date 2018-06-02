@@ -8,14 +8,23 @@ import java.util.Map;
 
 public class Hospital {
 
-	Map<String, Employee> employees = new HashMap<>();
+	private Map<String, Employee> employees = new HashMap<>();
 
 	public void addEmployee(Employee employee) {
 		employees.put(employee.getEmpNumber(), employee);
 	}
-	
-	public Employee findEmployee(String findName) {
-		return employees.get(findName);
+
+	public Employee getEmployeeByNumber(String findEmpNumber) {
+		return employees.get(findEmpNumber);
+	}
+
+	public Employee getEmployeeByName(String empName) {
+		for (Employee employee : employees.values()) {
+			if (employee.getEmpName().equals(empName)) {
+				return employee;
+			}
+		}
+		return null;
 	}
 
 	public Collection<Employee> getAllEmployees() {

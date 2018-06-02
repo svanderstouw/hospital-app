@@ -9,8 +9,7 @@ public class Receptionist extends Employee {
 	}
 	
 	public Receptionist(String empNumber, String empName, boolean isOnPhone) {
-		this.empNumber = empNumber;
-		this.empName = empName;
+		super(empNumber, empName);
 		this.isOnPhone = isOnPhone;
 	}
 
@@ -21,6 +20,6 @@ public class Receptionist extends Employee {
 	
 	@Override
 	public String toString() {
-		return empName + " " + empNumber + " " + isOnPhone;
+		return getEmpName() + " " + getEmpNumber() + " " + isOnPhone;
 	}
 }

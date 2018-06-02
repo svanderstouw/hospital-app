@@ -1,5 +1,6 @@
 package hospital;
 
+import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
@@ -44,6 +45,11 @@ public class SurgeonTest {
 	public void shouldReturnSpecialty() {
 		String checkSpecialty = underTest.getSpecialty();
 		assertEquals(checkSpecialty, "area");
+	}
+	
+	@Test
+	public void shouldBeADoctor() {
+		assertThat(underTest, instanceOf(Doctor.class));
 	}
 	
 	@Test

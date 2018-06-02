@@ -9,8 +9,7 @@ public class Janitor extends Employee{
 	}
 	
 	public Janitor(String empNumber, String empName, boolean isSweeping) {
-		this.empNumber = empNumber;
-		this.empName = empName;
+		super(empNumber, empName);
 		this.isSweeping = isSweeping;
 	}
 
@@ -21,6 +20,6 @@ public class Janitor extends Employee{
 	
 	@Override
 	public String toString() {
-		return empName + " " + empNumber + " " + isSweeping;
+		return getEmpName() + " " + getEmpNumber() + " " + isSweeping;
 	}
 }

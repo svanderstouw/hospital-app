@@ -1,3 +1,3 @@
-# High Strett Hospital App
+# High Street Hospital App
 
 WCCI Project

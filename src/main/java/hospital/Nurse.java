@@ -9,14 +9,8 @@ public class Nurse extends Employee implements MedicalDuties {
 	}
 	
 	public Nurse(String empNumber, String empName, int numPatients) {
-		this.empNumber = empNumber;
-		this.empName = empName;
+		super(empNumber, empName);
 		this.numPatients = numPatients;
-	}
-
-	@Override
-	public void drawBlood(Patient patient) {
-		patient.removeBlood(5);
 	}
 
 	@Override
@@ -31,6 +25,6 @@ public class Nurse extends Employee implements MedicalDuties {
 	
 	@Override
 	public String toString() {
-		return empName + " " + empNumber + " " + numPatients;
+		return getEmpName() + " " + getEmpNumber() + " " + numPatients;
 	}
 }

@@ -2,7 +2,9 @@ package hospital;
 
 public interface MedicalDuties {
 
-	void drawBlood(Patient patient);
+	public default void drawBlood(Patient patient) {
+		patient.removeBlood(5);
+	}
 
 	void administerCare(Patient patient);
 

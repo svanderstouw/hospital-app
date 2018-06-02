@@ -2,21 +2,15 @@ package hospital;
 
 public class Doctor extends Employee implements MedicalDuties {
 
-	protected String specialty;
+	private String specialty;
 
 	public String getSpecialty() {
 		return specialty;
 	}
 
 	public Doctor(String empNumber, String empName, String specialty) {
-		this.empNumber = empNumber;
-		this.empName = empName;
+		super(empNumber, empName);
 		this.specialty = specialty;
-	}
-
-	@Override
-	public void drawBlood(Patient patient) {
-		patient.removeBlood(5);
 	}
 
 	@Override
@@ -31,6 +25,6 @@ public class Doctor extends Employee implements MedicalDuties {
 
 	@Override
 	public String toString() {
-		return empName + " " + empNumber + " " + specialty;
+		return getEmpName() + " " + getEmpNumber() + " " + specialty;
 	}
 }

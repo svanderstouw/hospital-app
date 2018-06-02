@@ -39,6 +39,12 @@ public class HospitalApp {
 		System.out.println("Enter employee name to search:");
 		System.out.print("> ");
 		String nameToSearch = input.nextLine();
+		System.out.println("Name typed in " +nameToSearch);
+		Employee retrievedEmployee = hospital.getEmployeeByName(nameToSearch);
+		System.out.println();
+		System.out.println("Here are the stats for " + nameToSearch + ":");
+		System.out.println(retrievedEmployee);
+		System.out.println();
 		
 		hospital.showAllEmployees();
 
